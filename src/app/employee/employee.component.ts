@@ -16,7 +16,7 @@ export class EmployeeComponent implements OnInit {
 
   private employeeSubscribe: any;
 
-  private usr:Employee = new Employee(10,'tep');
+
 
 
 constructor(private _employeeService: HttpclientService) { }
@@ -28,9 +28,7 @@ deleteEmployee(id){
   }); 
 }
 
-createEmployee(){
-  this._employeeService.createEmployee(this.usr).subscribe(response=>console.log(response));
-}
+
 
   ngOnInit(): void {
     this._employeeService.getEmployees().subscribe(this.successCallBack, this.errorCallBack);

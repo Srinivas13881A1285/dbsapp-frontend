@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 
 
 
 export class Employee{
   constructor(
-    public id:number,
+    public empId:string,
     public name:string,
+    public designation:string,
+    public salary:string,
   ) {}
 
 }
@@ -22,7 +24,7 @@ export class HttpclientService {
   }
 
   public deleteEmployee(id:number){
-    // console.log("service method called");
+   
     return  this._http.delete("http://localhost:8080/api/employees/"+id);
   }
 
