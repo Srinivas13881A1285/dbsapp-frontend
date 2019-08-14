@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthGuardService } from './service/auth-guard.service';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { MultiFileUploadComponent } from './multi-file-upload/multi-file-upload.component';
 
 const routes: Routes = [
   
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path:"fileupload",component:FileUploadComponent
+  },
+  {
+    path:"multifileupload",component:MultiFileUploadComponent
   }
 ];
 

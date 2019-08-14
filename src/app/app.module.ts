@@ -9,14 +9,15 @@ import { MaterialsModule } from './materials/materials.module';
 import { EmployeeComponent } from './employee/employee.component';
 import { HttpclientService } from './services/httpclient.service';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { BasicAuthHtppInterceptorServiceService } from './services/basic-auth-htpp-interceptor-service.service';
 import { FileUploadComponent } from './file-upload/file-upload.component';
-import {FileSelectDirective} from "ng2-file-upload";
+import {FileSelectDirective, FileDropDirective} from "ng2-file-upload";
+import { MultiFileUploadComponent } from './multi-file-upload/multi-file-upload.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import {FileSelectDirective} from "ng2-file-upload";
     LoginComponent,
     LogoutComponent,
     FileUploadComponent,
-    FileSelectDirective
+    FileSelectDirective,
+    MultiFileUploadComponent,
+    FileDropDirective
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,10 @@ import {FileSelectDirective} from "ng2-file-upload";
     BrowserAnimationsModule,
     HttpClientModule,
     MaterialsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
+    
   ],
   providers: [
     {
