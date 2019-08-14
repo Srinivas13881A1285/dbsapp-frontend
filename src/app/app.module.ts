@@ -15,6 +15,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { BasicAuthHtppInterceptorServiceService } from './services/basic-auth-htpp-interceptor-service.service';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+import {FileSelectDirective} from "ng2-file-upload";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { BasicAuthHtppInterceptorServiceService } from './services/basic-auth-ht
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    FileUploadComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,

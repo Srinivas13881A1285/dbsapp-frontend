@@ -5,6 +5,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AuthGuardService } from './service/auth-guard.service';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 const routes: Routes = [
   
@@ -26,6 +27,9 @@ const routes: Routes = [
   {
     path: "", component: EmployeeComponent,canActivate:[AuthGuardService]
   },
+  {
+    path:"fileupload",component:FileUploadComponent
+  }
 ];
 
 @NgModule({
