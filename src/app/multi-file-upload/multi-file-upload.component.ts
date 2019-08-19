@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { FileUploader, FileItem } from 'ng2-file-upload';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-multi-file-upload',
@@ -17,7 +18,7 @@ export class MultiFileUploadComponent implements OnInit {
     itemAlias:'files'
   });
   title: string = 'Angular File Upload';
-  constructor(private fb: FormBuilder, private http: HttpClient ) { }
+  constructor(private fb: FormBuilder, private http: HttpClient,private _snackBar:MatSnackBar ) { }
 
   uploadSubmit(){
         for (let i = 0; i < this.uploader.queue.length; i++) {
@@ -47,7 +48,7 @@ export class MultiFileUploadComponent implements OnInit {
   }
 
   successCallBack = (data):any=>{
-    alert(data.fileName+" successfully uploaded");
+    // alert(data.fileName+" successfully uploaded");
     console.log(data);
   }
 
@@ -67,4 +68,8 @@ export class MultiFileUploadComponent implements OnInit {
     });
   }
 
+
+  openSnackBar(){
+    this._snackBar.open("files uploaded successfully");
+  }
 }
